@@ -1,0 +1,195 @@
+/* CSS Variables for Ancient Wisdom Theme */
+:root {
+    /* Colors */
+    --parchment: #f8f3e9;
+    --aged-paper: #f5f0e6;
+    --deep-ink: #2c2c2c;
+    --sage: #8B7355;
+    --terra-cotta: #A86A3D;
+    --dusty-blue: #7A9EB1;
+    --shadow: rgba(139, 115, 85, 0.1);
+    --gold: #C9A96E;
+    
+    /* Typography */
+    --serif: 'Georgia', 'Times New Roman', serif;
+    --sans-serif: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 2rem;
+    --space-lg: 4rem;
+    --space-xl: 8rem;
+}
+
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--serif);
+    background-color: var(--parchment);
+    color: var(--deep-ink);
+    line-height: 1.7;
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(139, 115, 85, 0.03) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(169, 106, 61, 0.03) 0%, transparent 50%);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-sm);
+}
+
+/* Header Styles */
+.site-header {
+    padding: var(--space-sm) 0;
+    border-bottom: 1px solid var(--shadow);
+    position: sticky;
+    top: 0;
+    background: rgba(248, 243, 233, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h1 {
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin-bottom: -0.5rem;
+}
+
+.logo span {
+    font-size: 0.9rem;
+    color: var(--sage);
+    letter-spacing: 1px;
+}
+
+/* Navigation */
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: var(--space-md);
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--deep-ink);
+    font-size: 0.95rem;
+    transition: color 0.3s ease;
+    text-transform: lowercase;
+}
+
+.nav-links a:hover {
+    color: var(--sage);
+}
+
+.cta-link {
+    background: var(--sage);
+    color: white !important;
+    padding: 0.5rem 1rem;
+    border-radius: 2px;
+}
+
+/* Hero Section */
+.hero {
+    padding: var(--space-xl) 0;
+    text-align: center;
+    background: linear-gradient(135deg, var(--parchment) 0%, var(--aged-paper) 100%);
+}
+
+.hero-subtitle {
+    color: var(--sage);
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: var(--space-sm);
+    display: block;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: normal;
+    line-height: 1.2;
+    margin-bottom: var(--space-md);
+    color: var(--deep-ink);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-description {
+    font-size: 1.3rem;
+    color: var(--sage);
+    max-width: 600px;
+    margin: 0 auto var(--space-lg);
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 2px;
+    font-family: var(--sans-serif);
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--sage);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--terra-cotta);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--sage);
+    border: 1px solid var(--sage);
+}
+
+.btn-secondary:hover {
+    background: var(--sage);
+    color: white;
+}
+
+.hero-actions {
+    display: flex;
+    gap: var(--space-sm);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Section Titles */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: normal;
+    margin-bottom: var(--space-lg);
+    color: var(--deep-ink);
+    position: relative;
+}
+
+.section-title::after {
+    content: "✦";
+    display: block;
+    font-size: 1.5rem;
+    color: var(--sage);
+    margin-top: var(--space-sm);
+    opacity: 0.6;
+}
